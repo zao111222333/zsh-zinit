@@ -1,0 +1,30 @@
+# Source My Config
+export ZSH_DIR=".zsh.d"
+source $HOME/$ZSH_DIR/config.zsh
+
+# Source global definitions
+if [ -f /etc/profile ]; then
+	. /etc/profile
+fi
+if [ -f /etc/zshrc ]; then
+	. /etc/zshrc
+fi
+
+# Lines configured by zsh-newuser-install
+HISTFILE=$HOME/$ZSH_DIR/zshistory
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# https://stackoverflow.com/questions/12382499/looking-for-altleftarrowkey-solution-in-zsh
+bindkey "^[^[[D" backward-word
+bindkey "^[^[[C" forward-word
+
+# Some more alias to avoid making mistakes:
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ll='ls -lh'
+alias la='ls -A'
+alias l='ls -CF'
+# User specific environment
