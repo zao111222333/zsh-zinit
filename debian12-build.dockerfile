@@ -17,7 +17,7 @@ COPY zsh /tmp/zsh
 RUN usermod --shell /bin/zsh root \
  && echo "export LC_ALL=C" >> /etc/profile \
  && bash /tmp/zsh/install.sh
-SHELL ["/usr/local/bin/zsh", "-c"] 
+SHELL ["/bin/zsh", "-c"] 
 ENV TERM="xterm-256color"
 RUN source /root/.zshrc\
  && zinit update
