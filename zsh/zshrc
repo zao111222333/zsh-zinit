@@ -24,7 +24,7 @@ bindkey "^[^[[C" forward-word
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+# ls
 alias ll='ls -lh'
 alias la='ls -A'
-alias l='ls -CF'
 # User specific environment

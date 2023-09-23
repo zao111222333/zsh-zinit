@@ -1,11 +1,6 @@
 # docker build --network host -t zao111222333/zsh-zinit:centos7-build -f centos7-build.dockerfile .
-# docker run -it --rm \
-# zao111222333/zsh:zinit-centos-origin
-# docker push zao111222333/zsh:zinit-origin
-# history -p
-# docker run -it --name zsh-centos-build zao111222333/zsh:zinit-centos-origin
-# docker commit zsh-centos-build zao111222333/zsh:zinit-centos-build
-# docker push zao111222333/zsh:zinit-centos
+# docker run -it --rm zao111222333/zsh-zinit:centos7-build
+# docker push zao111222333/zsh-zinit:centos7-build
 
 FROM centos:7
 RUN yum -y update \
