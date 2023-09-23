@@ -16,8 +16,7 @@ RUN rm -Rf /var/lib/apt/lists/* \
 COPY zsh /tmp/zsh
 RUN usermod --shell /bin/zsh root \
  && echo "export LC_ALL=C" >> /etc/profile \
- && bash /tmp/zsh/install.sh \
- && rm /root/.profile /root/.bashrc
+ && bash /tmp/zsh/install.sh
 SHELL ["/usr/local/bin/zsh", "-c"] 
 ENV TERM="xterm-256color"
 RUN source /root/.zshrc\
