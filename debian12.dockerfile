@@ -17,7 +17,7 @@ RUN usermod --shell /bin/zsh root \
 SHELL ["/bin/zsh", "-c"] 
 RUN source /root/.zshrc
 
-RUN rm -rf /tmp/* \
+RUN rm -rf /tmp \
  && rm -rf /var/lib/apt/lists/* \
  && apt-get clean
 ENTRYPOINT ["/bin/zsh"]
