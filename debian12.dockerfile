@@ -6,7 +6,7 @@ FROM debian:bookworm
 # zsh
 RUN apt-get update -y && apt-get upgrade -y \
  && apt-get install -y --no-install-recommends \
-    zsh \
+    zsh
 COPY --from=zao111222333/zsh-zinit:debian12-install /root/.zsh.d /root/.zsh.d
 COPY --from=zao111222333/zsh-zinit:debian12-install /root/.zshrc /root/.zshrc
 ENV TERM="xterm-256color"
