@@ -4,8 +4,8 @@
 
 FROM debian:bookworm
 # zsh
-COPY --from=zao111222333/zsh-zinit:debian-build /root/.zsh.d /root/.zsh.d
-COPY --from=zao111222333/zsh-zinit:debian-build /root/.zshrc /root/.zshrc
+COPY --from=zao111222333/zsh-zinit:debian-install /root/.zsh.d /root/.zsh.d
+COPY --from=zao111222333/zsh-zinit:debian-install /root/.zshrc /root/.zshrc
 ENV TERM="xterm-256color"
 RUN usermod --shell /bin/zsh root \
  && echo "export LC_ALL=C" >> /etc/profile \

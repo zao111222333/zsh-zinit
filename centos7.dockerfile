@@ -4,12 +4,12 @@
 
 FROM centos:7
 # zsh
-COPY --from=zao111222333/zsh-zinit:centos7-build /usr/local/bin/zsh /usr/local/bin/zsh
-COPY --from=zao111222333/zsh-zinit:centos7-build /usr/local/lib/zsh /usr/local/lib/zsh
-COPY --from=zao111222333/zsh-zinit:centos7-build /usr/local/share/zsh /usr/local/share/zsh
-COPY --from=zao111222333/zsh-zinit:centos7-build /usr/share/zsh /usr/share/zsh
-COPY --from=zao111222333/zsh-zinit:centos7-build /root/.zsh.d /root/.zsh.d
-COPY --from=zao111222333/zsh-zinit:centos7-build /root/.zshrc /root/.zshrc
+COPY --from=zao111222333/zsh-zinit:centos7-install /usr/local/bin/zsh /usr/local/bin/zsh
+COPY --from=zao111222333/zsh-zinit:centos7-install /usr/local/lib/zsh /usr/local/lib/zsh
+COPY --from=zao111222333/zsh-zinit:centos7-install /usr/local/share/zsh /usr/local/share/zsh
+COPY --from=zao111222333/zsh-zinit:centos7-install /usr/share/zsh /usr/share/zsh
+COPY --from=zao111222333/zsh-zinit:centos7-install /root/.zsh.d /root/.zsh.d
+COPY --from=zao111222333/zsh-zinit:centos7-install /root/.zshrc /root/.zshrc
 ENV TERM="xterm-256color"
 ENV FPATH=$FPATH:/usr/local/share/zsh/site-functions:/usr/local/share/zsh/5.9/functions
 RUN usermod --shell /usr/local/bin/zsh root \

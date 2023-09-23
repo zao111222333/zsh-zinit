@@ -1,6 +1,9 @@
 # docker build --network host -t zao111222333/zsh-zinit:debian12-build -f debian12-build.dockerfile .
-# docker run -it --rm zao111222333/zsh-zinit:debian12
+# docker run -it --name debian12-install zao111222333/zsh-zinit:debian12-build
+# docker commit debian12-install zao111222333/zsh-zinit:debian12-install
+# docker run -it --rm zao111222333/zsh-zinit:debian12-install
 # docker push zao111222333/zsh-zinit:debian12-build
+# docker push zao111222333/zsh-zinit:debian12-install
 FROM debian:bookworm
 RUN rm -Rf /var/lib/apt/lists/* \
  && apt-get update -y && apt-get upgrade -y \
